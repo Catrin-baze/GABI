@@ -1,0 +1,53 @@
+# @package _global_
+defaults:
+ - _self_
+
+target: adni
+task: classification
+
+num_classes: 3  
+weights: 
+class_weights_for_loss:
+live_loading: True
+delete_segmentation: False
+balanced_accuracy: False
+eval_metric: balanced_acc
+data_orig:
+low_data_splits: ['']
+
+# num of features
+num_cat: 32
+num_con: 7  
+max_epochs: 50
+
+labels_train: adni_labels_train.pt 
+labels_val: adni_labels_val.pt 
+labels_test: adni_labels_test.pt 
+
+data_train_imaging: adni_train_paths_imaging.pt
+data_val_imaging: adni_val_paths_imaging.pt
+data_test_imaging: adni_test_paths_imaging.pt
+
+data_train_tabular: adni_features_train_imputed_noOH_tabular_imaging_reordered.csv
+data_val_tabular: adni_features_val_imputed_noOH_tabular_imaging_reordered.csv
+data_test_tabular: adni_features_test_imputed_noOH_tabular_imaging_reordered.csv
+
+field_lengths_tabular: tabular_lengths_reordered.pt
+
+data_train_eval_tabular: adni_features_train_imputed_noOH_tabular_imaging_reordered.csv
+labels_train_eval_tabular: adni_labels_train.pt 
+
+data_val_eval_tabular: adni_features_val_imputed_noOH_tabular_imaging_reordered.csv
+labels_val_eval_tabular: adni_labels_val.pt 
+
+data_test_eval_tabular: adni_features_test_imputed_noOH_tabular_imaging_reordered.csv 
+labels_test_eval_tabular: adni_labels_test.pt 
+
+data_train_eval_imaging: adni_train_paths_imaging.pt
+labels_train_eval_imaging: adni_labels_train.pt
+
+data_val_eval_imaging: adni_val_paths_imaging.pt
+labels_val_eval_imaging: adni_labels_val.pt
+
+data_test_eval_imaging: adni_test_paths_imaging.pt
+labels_test_eval_imaging: adni_labels_test.pt
