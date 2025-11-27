@@ -1,5 +1,5 @@
 This repository contains the official implementation for the paper:  
-**"Vision-Language-Guided Granularity Alignment and Balanced Fusion for Multimodal Brain Data"**
+**Vision-Language-Guided Granularity Alignment and Balanced Fusion for Multimodal Brain Data**
 
 ## 1. Prerequisites
 
